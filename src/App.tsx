@@ -71,17 +71,13 @@ function getPage() {
 }
 
 // ─── COMPONENTS ──────────────────────────────────────────────────────────────
-function Logo() {
+function Logo({ variant = 'noir' }: { variant?: 'noir' | 'blanc' }) {
   return (
-    <div style={{ display: 'flex', alignItems: 'center', gap: 10 }}>
-      <div style={{ width: 38, height: 38, borderRadius: 10, background: S.orange, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-        <span style={{ color: S.white, fontWeight: 800, fontSize: 16 }}>ST</span>
-      </div>
-      <div>
-        <div style={{ fontWeight: 700, fontSize: 14, color: S.navy, lineHeight: 1.2 }}>Samirra Trari</div>
-        <div style={{ fontSize: 11, color: S.textLight }}>Méthode 15 Clés</div>
-      </div>
-    </div>
+    <img
+      src={`/logo-${variant}.svg`}
+      alt="Trari L'Académie"
+      style={{ height: 36, width: 'auto', display: 'block' }}
+    />
   )
 }
 
